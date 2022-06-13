@@ -6,11 +6,12 @@ require './lib/encryption'
 require './lib/decryption'
 require 'date'
 
-RSpec.describe Enigma do
+RSpec.describe Decryption do
   before :each do
-    @enigma = Enigma.new
+    @decryption_message = Decryption.new(ciphertext, key, date)
   end
 
   it 'exists & has attributes' do
-    expect(@enigma).to be_a(Enigma)
+    expect(@decryption_message).to be_a(Decryption)
   end
+end
