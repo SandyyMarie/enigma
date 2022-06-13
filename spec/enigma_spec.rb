@@ -1,6 +1,7 @@
 require 'simplecov'
 SimpleCov.start
 require './lib/enigma'
+require 'date'
 
 RSpec.describe Enigma do
   before :each do
@@ -23,5 +24,5 @@ RSpec.describe Enigma do
     @enigma.decrypt(encrypted[:encryption], "02715")
     expect(@enigma.decryption(ciphertext, key, date)).to be_a(Hash)
   end
-  
+
 end
