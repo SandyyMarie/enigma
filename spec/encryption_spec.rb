@@ -1,4 +1,4 @@
-#all decryption tests
+#all encryption tests
 require 'simplecov'
 SimpleCov.start
 require './lib/enigma'
@@ -6,11 +6,12 @@ require './lib/encryption'
 require './lib/decryption'
 require 'date'
 
-RSpec.describe Enigma do
+RSpec.describe Encryption do
   before :each do
-    @enigma = Enigma.new
+    @encryption_message = Encryption.new(message, key, date)
   end
 
   it 'exists & has attributes' do
-    expect(@enigma).to be_a(Enigma)
+    expect(@encryption_message).to be_a(Encryption)
   end
+end
