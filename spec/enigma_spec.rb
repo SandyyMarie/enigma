@@ -13,7 +13,7 @@ RSpec.describe Enigma do
   end
 
   it "ENCRYPT: can take a string to be encrypted, a key, and a date (given or generated) and returns encryption hash" do
-    encrypted = @enigma.encrypt("hello world", "02715")
+    encrypted = @enigma.encrypt("hello world", "02715", "040895")
     expect(@enigma.encrypt(message, key, date)).to be_a(Hash)
     expect(encrypted).to be_a(String)
     expect(enigma.encrypt("hello world")).to be_a(Hash)
