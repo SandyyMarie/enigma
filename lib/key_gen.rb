@@ -5,11 +5,7 @@ class Key_Gen
   def initialize
     #("a".."z").to_a << " "
     @new_key = SecureRandom.random_number(99999)
-    # @a_key = []
-    # @b_key = []
-    # @c_key = []
-    # @d_key = []
-
+    key_split(@new_key)
   end
 
   def key_split(new_key)
@@ -17,7 +13,5 @@ class Key_Gen
     @b_key = @new_key.to_s[1..2]
     @c_key = @new_key.to_s[2..3]
     @d_key = @new_key.to_s[3..4]
-
-
   end
 end
