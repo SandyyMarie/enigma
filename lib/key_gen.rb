@@ -6,5 +6,10 @@ class Key_Gen
     #("a".."z").to_a << " "
     @new_key = SecureRandom.random_number(99999)
     # require 'pry' ; binding.pry
+
+  end
+
+  def key_split
+
   end
 end

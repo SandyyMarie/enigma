@@ -16,4 +16,11 @@ RSpec.describe Key_Gen do
   it "generates 5 integers" do
     expect(@key_generator.new_key.digits.count).to eq(5)
   end
+
+  it "can split the key into the ABCD keys" do
+    expect(@key_generator.a_key.digits.count).to eq(2)
+    expect(@key_generator.b_key.digits.count).to eq(2)
+    expect(@key_generator.c_key.digits.count).to eq(2)
+    expect(@key_generator.d_key.digits.count).to eq(2)
+  end
 end
