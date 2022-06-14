@@ -9,9 +9,9 @@ class Key_Gen
   end
 
   def key_split(new_key)
-    @a_key = @new_key.to_s[0..1]
-    @b_key = @new_key.to_s[1..2]
-    @c_key = @new_key.to_s[2..3]
-    @d_key = @new_key.to_s[3..4]
+    @a_key = @new_key.to_s[0..1].to_i
+    @b_key = @new_key.to_s[1..2].to_i
+    @c_key = @new_key.to_s[2..3].to_i
+    @d_key = @new_key.to_s[3..4].to_i
   end
 end

@@ -19,9 +19,9 @@ RSpec.describe Key_Gen do
   end
 
   it "can  utilize #key_split to divide into the ABCD keys" do
-    expect(@key_generator.a_key.length).to eq(2)
-    expect(@key_generator.b_key.length).to eq(2)
-    expect(@key_generator.c_key.length).to eq(2)
-    expect(@key_generator.d_key.length).to eq(2)
+    expect(@key_generator.a_key.digits.count).to eq(2)
+    expect(@key_generator.b_key.digits.count).to eq(2)
+    expect(@key_generator.c_key.digits.count).to eq(2)
+    expect(@key_generator.d_key.digits.count).to eq(2)
   end
 end
